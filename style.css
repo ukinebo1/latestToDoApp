@@ -23,10 +23,10 @@
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 .to_do h2 img{
-    width: 30px;
+    width: 20px;
     margin-left: 10px;
 }
 
@@ -62,26 +62,43 @@ ul li{
     cursor: pointer;
     user-select: none;
     font-size: 17px;
-    padding: 12px 8px 12px 50px;
+    padding: 12px 8px 28px 50px;
     position: relative;
 }
 ul li::before{
     content: '';
     position: absolute;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    background-image: url();
+    width: 28px;
+    height: 28px;
+    background-image: url(assests/circle-regular.svg);
     background-size: cover;
     background-position: center;
     top: 12px;
     left: 8px;
 }
 
-.checked{
-    color: #002;
+ul li.checked{
+    color: #555;
     text-decoration: line-through;
 }
-.checked::before{
-    background-image: url();
+ul li.checked::before{
+    background-image: url(assests/check-solid.svg);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+    color: #555;
+    font-size: 27px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background-color: #edeef0;
 }
